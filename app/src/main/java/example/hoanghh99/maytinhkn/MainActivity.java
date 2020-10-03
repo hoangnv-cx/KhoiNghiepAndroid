@@ -1,6 +1,7 @@
 package example.hoanghh99.maytinhkn;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -20,10 +21,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             btnTong,btnHieu,btnTich,btnThuong,btnCham,btnMu,btnClear,btnClearAll,btnResult,btnSqrt;
     EditText edtNumber;
     TextView tvResult;
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("Calculator");
         anhxa();
         setEventClickViews();
     }
